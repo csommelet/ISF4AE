@@ -104,7 +104,7 @@ static PF_Err GlobalSetup(PF_InData* in_data, PF_OutData* out_data, PF_ParamDef*
   }
 
   // Initialize global OpenGL context
-  globalData->context = VVGL::CreateNewGLContextRef(NULL, CreateCompatibilityGLPixelFormat());
+  globalData->context = VVGL::CreateNewGLContextRef(NULL, CreateGL4PixelFormat());
   VVGL::CreateGlobalBufferPool(globalData->context->newContextSharingMe());
 
   globalData->downloader = VVGL::CreateGLTexToCPUCopierRefUsing(globalData->context->newContextSharingMe());
